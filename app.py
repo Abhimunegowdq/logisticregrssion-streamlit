@@ -75,9 +75,11 @@ st.pyplot(fig4)
 
 # Correlation Heatmap
 fig5, ax5 = plt.subplots(figsize=(8,6))
-sns.heatmap(df.corr(), annot=True, cmap="coolwarm", ax=ax5)
+corr = df.select_dtypes(include="number").corr()
+sns.heatmap(corr, annot=True, cmap="coolwarm", ax=ax5)
 ax5.set_title("Feature Correlation Heatmap")
 st.pyplot(fig5)
+
 
 # -----------------------------------------------
 # Step 2: Split Features and Labels
