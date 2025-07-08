@@ -209,3 +209,38 @@ if st.checkbox("Run model on test dataset"):
 
     except Exception as e:
         st.error(f"Error processing test dataset: {e}")
+
+
+
+# -----------------------------------------------
+# Step 7: Interview Questions Section
+# -----------------------------------------------
+st.subheader("Interview Questions and Answers")
+
+st.markdown("""
+### 1. What is the difference between precision and recall?
+
+- **Precision**: Of all the predicted positives, how many were actually correct?  
+  Formula: **Precision = TP / (TP + FP)**  
+  *High precision means fewer false positives.*
+
+- **Recall**: Of all actual positive cases, how many did the model find?  
+  Formula: **Recall = TP / (TP + FN)**  
+  *High recall means fewer false negatives.*
+
+---
+
+### 2. What is cross-validation, and why is it important in binary classification?
+
+Cross-validation is a technique used to evaluate a model's performance by splitting the data into multiple parts (called folds). The model is trained on some parts and tested on others.
+
+- **Why it's important**:
+  - It gives a better estimate of model performance.
+  - Helps avoid overfitting.
+  - Ensures the model works well on unseen data.
+
+The most common method is **k-fold cross-validation**, where the data is split into *k* equal parts and the model is trained/tested *k* times.
+""")
+
+
+
